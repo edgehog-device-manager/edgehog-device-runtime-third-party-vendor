@@ -101,7 +101,7 @@ jobs:
           git commit --signoff -m "ci: update dependencies for tag $GIT_TAG"
           git push --force-with-lease --set-upstream origin "vendor/$GIT_TAG"
       - name: Create the pull request
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           script: |
             const tag = process.env.GIT_TAG;
