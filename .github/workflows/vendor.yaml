@@ -58,7 +58,7 @@ jobs:
       - name: Compress the vendor dir
         run: tar -czf vendor.tar.gz vendor/ .last-tag
       - name: Upload the vendor directory
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: deps-vendor
           path: vendor.tar.gz
